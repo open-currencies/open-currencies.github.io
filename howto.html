@@ -1,0 +1,222 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Open currencies</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<h2>How to ...</h2>
+								</header>							
+							
+							<!-- Section -->
+								<section>
+										<a href="#openaccount">How to open an OCS account?</a><br>
+										<a href="#getfunding">How to apply for funding in a currency?</a><br>
+										<a href="#addaccount">How to add someone else's account to my client?</a><br>
+										<a href="#transfer">How to make transfers with OCS?</a><br>
+										<a href="#exchange">How to exchange liquidity?</a><br>
+										<a href="#portaccount">How to port an account to another client?</a><br>
+										<a href="#becomereferee">How to become a referee for a currency?</a><br>
+										<a href="#becomenotary">How to become a notary?</a><br> 
+										<a href="#addimages">How to add images to proposals and applications?</a><br> 
+								</section>
+							
+							<!-- Section -->
+								<section>
+										<h3><a name="openaccount">How to open an OCS account?</a></h3>
+										<p>To open a new account you need to start the OCS client, go to <code>Operator tasks -> Create new account</code>
+										and type in the name of the new account. Note that the name provided is a local name that should be different from
+										(local) account names used so far on your machine. An account is not identified by its name and also not by its owner/creator. 
+										Instead an OCS account
+										is essentially a pair of keys: a private key and a public key. The public key is submitted to the notary, you are currently connected to,
+										for registration, while the private key remains on your machine. 
+										The public key is used to distinguish this account from other accounts, but
+										also to verify transactions and other entries signed with the private key that should remain known to you only.</p>
+										<p>To verify that your account was successfully created and the public key submitted and notarized go to 
+										<code>Operator tasks -> Show account info</code>. You should be able to display basic information regarding your 
+										newly created account and to recover
+										the account's ID (Key Id). This ID is sufficient to identify your account, in particular to perform transfers to it.
+										<p>Note that account movements for all OCS accounts are public, it is, however, not public who the owner of a given account is. 
+										You remain
+										anonymous as the owner of your account unless you choose to make this information public. You can set up and manage
+										arbitrarily many accounts.</p>
+								</section>
+								
+							<!-- Section -->
+								<section>
+										<h3><a name="getfunding">How to apply for funding in a currency?</a></h3>
+										<p>To apply for the financing of an economic operation you first need to find the currency, in which you will request funds, under
+										 <code>Operator tasks -> Show liquidity info</code>.
+										Choose the name of the currency or insert the ID of the respective currency (if known). Once the parameters and description
+										of the currency are displayed click on <code>APPLY FOR LIQUIDITY</code>. Next fill in the form and submit your proposal. Make sure that the description part
+										is not bigger than 1.5 MB.<br>
+										Note that your proposal must follow the guidelines defined in the currency description. Otherwise it is unlikely to be approved.<br>
+										An application that is ignored is automatically rejected after some time without you getting any feedback. Please make sure to include an e-mail address
+										and/or other contact details to your submissions to allow interested community members to give you feedback.</p>
+								</section>
+
+								
+							<!-- Section -->
+								<section>
+										<h3><a name="addaccount">How to add someone else's account to my client?</a></h3>
+										<p>In order to add someone's account to your client you need to know the ID (Key Id) of the respective account and, ideally,
+										also its hash value.<br>
+										Go to <code>Operator tasks -> Show account info</code> and insert the ID. Once the account has been found and its
+										data has been displayed you should check the hash value to make sure that you are dealing with the right account.
+										Then click on <code>ASSIGN NAME</code> and type in the name under which you want the client
+										to denote this account in the future. If after doing so you close the account info window and reopen it via 
+										<code>Operator tasks -> Show account info</code> the account name should now be listed directly under <code>Account</code>.</p>
+								</section>
+								
+							<!-- Section -->
+								<section>
+										<h3><a name="transfer">How to make transfers with OCS?</a></h3>
+										<p>Before being able to make transfers to someone else's account you must first <a href="#addaccount">add it</a> to your client.<br>
+										To transfer liquidity in either a currency or an obligation go to <code>Operator tasks -> Transfer liquidity</code> and fill in the
+										form. </p>
+										<p>If you want someone else to transfer liquidity to your account, e.g. in return for a good or service, you can place a 
+										so-called transfer
+										request: Go to <code>Operator tasks -> Request liquidity -> Create new request</code> and fill in the form. After this you should be able to 
+										determine the ID of the newly created request via <code>Operator tasks -> Request liquidity -> Show existing requests</code>.
+										This ID is then copied and sent to the person or group of people who you expect to satisfy this particular request. </p>
+										<p>In order to fulfill a given transfer request go to <code>Operator tasks -> Show transaction info</code> and insert
+										the ID of the transfer request. Once the information has been displayed click on 
+										<code>SATISFY THIS REQUEST</code> and fill in the form.</p>
+								</section>
+								
+							<!-- Section -->
+								<section>
+										<h3><a name="exchange">How to exchange liquidity?</a></h3>
+										<p>For the purpose of exchanging some amount in a given currency or obligation into an amount of another currency or obligation you
+										can either find and accept an existing exchange offer or place an exchange offer yourself.</p>
+										<p>For the first option go to <code>Operator tasks -> Exchange liquidity -> Show existing offers</code> and fill in the form to
+										search for existing offers. In order to accept any of the offers displayed copy the respective ID and go to 
+										<code>Operator tasks -> Show transaction info</code> and insert the ID. After the data concerning this offer has been displayed
+										click on <code>ACCEPT THIS OFFER</code> and fill in the form.</p>
+										<p>In order to place a new offer go to <code>Operator tasks -> Exchange liquidity -> Create new offer</code> and fill in the
+										form. After this you should verify that the offer was successfully notarized by being able to find it under
+										<code>Operator tasks -> Exchange liquidity -> Show existing offers</code>. In order to delete the offer determine and copy its ID
+										and go to <code>Operator tasks -> Show transaction info</code>. Insert the ID and request data concerning the offer.
+										Then click on <code>ACCEPT THIS OFFER</code> and choose your account as the source account. Finally, click on 
+										<code>Delete offer</code>.</p>
+								</section>
+								
+							<!-- Section -->
+								<section>
+										<h3><a name="portaccount">How to port an account to another client?</a></h3>
+										<p>When using different instances of the OCS client (e.g. on different machines) you can port an account from a client A to a client B
+										using the following procedure: </p>
+										<p>First make sure that neither of the clients is running. Now open the directory <code>conf/keys</code> in the directory
+										of client A. Assume we want to port an account named "AccountXYZ" (local name used by client A) that you happen to be the owner of. 
+										Then the directory <code>conf/keys</code> should contain the file <code>AccountXYZ.PRVTkey</code>.
+										Now copy this file to the directory <code>conf/keys</code> of client B. Before proceeding further you may rename the new file to any name
+										you like, e.g. <code>AccountABC.PRVTkey</code>, but make sure that the file still ends with <code>.PRVTkey</code> and that the new name is not already used
+										in client B for another account. Now start client B. After a few seconds the newly added account should be listed under <code>Account</code>
+										when opening <code>Operator tasks -> Show account info</code>.</p>
+										<p>The above procedure can also be performed for a <code>.PBLCkey</code> file instead of a <code>.PRVTkey</code> file. 
+										However, in this case you will not be able to make transfers from that
+										account with client B and the account will be treated as someone else's account.</p>
+								</section>
+								
+							<!-- Section -->
+								<section>
+										<h3><a name="becomereferee">How to become a referee for a currency?</a></h3>
+										<p>To submit a referee application go to <code>Referee tasks -> Show currency info</code> and find the respective currency. After displaying
+										the currency's description click on <code>APPLY FOR REFEREE STATUS</code> and fill in the form. Make sure that the description part
+										is not bigger than 1.5 MB.
+										Note that your application must follow the guidelines defined in the currency description. Otherwise it is unlikely to be approved.<br>
+										An application that is ignored is automatically rejected after some time without you getting any feedback. Please make sure to include an e-mail address
+										and/or other contact details to your applications to allow interested community members to give you feedback.</p>
+								</section>
+								
+							<!-- Section -->
+								<section>
+										<h3><a name="becomenotary">How to become a notary?</a></h3>
+										<p>To submit a notary application go to <code>Notary tasks -> Show lineage info</code> and click on <code>Notary application</code>.
+										Now fill in the form making sure that the description part is not bigger than 1.5 MB.<br>
+										Note that as a notary you must be knowledgeable about the protocols and procedures used in the technical implementation of the OCS as described
+										in its <a href="ConstitutionOCS.pdf">constitution</a>, follow all guidelines and fulfill all requirements defined in it.<br>
+										An application that is ignored is automatically rejected after some time without you getting any feedback. Please make sure to include an e-mail address
+										and/or other contact details to your applications to allow interested community members to give you feedback.</p>
+								</section>
+								
+							<!-- Section -->
+								<section>
+										<h3><a name="addimages">How to add images to proposals and applications?</a></h3>
+										<p>You should avoid adding large images as the total size of a submission cannot exceed 1.5 MB. Instead,
+										you may choose to simply add a URL of or a link to an external image file. Smaller images may be inserted directly using data URI's:<br>
+										<blockquote>
+										This is a red dot
+										<br><br>
+										{{data:image/png;base64,<br>
+										iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAABGdBTUEAALGP<br>
+										C/xhBQAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9YGARc5KB0XV+IA<br>
+										AAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAF1J<br>
+										REFUGNO9zL0NglAAxPEfdLTs4BZM4DIO4C7OwQg2JoQ9LE1exdlYvBBeZ7jq<br>
+										ch9//q1uH4TLzw4d6+ErXMMcXuHWxId3KOETnnXXV6MJpcq2MLaI97CER3N0<br>
+										vr4MkhoXe0rZigAAAABJRU5ErkJggg==}}
+										<br><br>
+										based on a data URI.
+										</blockquote>
+										A data URI maker can be found <a href="https://dataurl.sveinbjorn.org/#dataurlmaker">here</a>.								
+										</p>
+								</section>
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Home</a></li>
+										<li><a href="about.html">About</a></li>
+										<li><a href="download.html">Download</a></li>
+										<li><a href="howto.html">How-to</a></li>
+										<li><a href="faq.html">FAQ</a></li>
+										<li><a href="support.html">Support us</a></li>
+									</ul>
+								</nav>
+
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Open currencies foundation. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
